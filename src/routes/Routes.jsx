@@ -48,6 +48,26 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
+    }, 
+    {
+        path: 'login',
+        element: <LoginLayout></LoginLayout>,
+        children: [
+            {
+                path: '/login',
+                element: <Login></Login>
+            }
+        ]
+    },
+    {
+        path: 'register',
+        element: <LoginLayout></LoginLayout>,
+        children: [
+        {
+            path: '/register',
+            element: <Register></Register>
+        }
+        ]
     }
 ])
 
